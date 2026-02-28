@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO 및 소셜 미디어 공유용 메타 태그 -->
+    <title>STEP 3 | 2F Periodicals Room</title>
+    <meta name="description" content="Mission 3: Explore the Periodicals Room and find hints about E-Learning and the next destination!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- 헤더 부분 -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-3">STEP 3</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2">
+                2F Periodicals Room
+            </h1>
+        </header>
+
+        <!-- 언어 선택 탭 -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" id="btn-en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" id="btn-cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" id="btn-jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <!-- Hanyangi's Mission Box -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">Oh? You came here too?</p>
+                        <p>Bibi didn’t even know about the Periodicals Room?</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm">
+                            <p class="text-blue-800 font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i> Notice</p>
+                            <p>The materials here cannot be checked out, so they can only be read inside this room—just so you know.</p>
+                        </div>
+
+                        <p>Oh, you said you wanted to study English, right? Go to the library website and click on the <strong>E-Learning tab</strong>.</p>
+                        <p>You can take various online courses for free, such as Hackers, Parkmungak, and Sinagong.</p>
+                        <p class="font-medium text-blue-800 underline decoration-blue-300">Once you enter that tab, you’ll find out where you can receive the next stamp.</p>
+                    </div>
+                </div>
+
+                <!-- Hint Box -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-location-arrow text-blue-600 mr-2"></i> Destination Hint
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-center font-bold text-slate-700">What, still not sure? Here’s a hint—this is a book’s call number.</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+                            <p class="text-2xl font-mono font-black text-slate-800 tracking-wider">3F Asian Collection Room</p>
+                        </div>
+                        <p class="text-center text-sm text-slate-500 italic font-medium">Find the shelf where this call number would be located!</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">嗯？你也来了？</p>
+                        <p>比比那家伙，连连续出版物阅览室都不知道吗？</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm">
+                            <p class="text-blue-800 font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i> 注意事项</p>
+                            <p>这里的资料不能外借，只能在本室内阅读，记住哦。</p>
+                        </div>
+
+                        <p>对了，你不是说想学英语吗？在学术信息馆官网找到 <strong>E-Learning 页面</strong>进入看看。</p>
+                        <p>可以免费学习多种在线课程，例如 Hackers、Parkmungak、Sinagong 等。</p>
+                        <p class="font-medium text-blue-800 underline decoration-blue-300">进入该页面后，你就能知道下一枚印章在哪里领取了。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-location-arrow text-blue-600 mr-2"></i> 目的地提示
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-center font-bold text-slate-700">怎么，还是不太清楚？给你一个提示——这是一本书的索书号。</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+                            <p class="text-2xl font-mono font-black text-slate-800 tracking-wider">3楼 东洋书资料室</p>
+                        </div>
+                        <p class="text-center text-sm text-slate-500 italic font-medium">找到可能存放这个索书号的书架吧！</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-4 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">あれ？君も来たの？</p>
+                        <p>ビビは逐次刊行物室も知らなかったの？</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm">
+                            <p class="text-blue-800 font-bold mb-1"><i class="fa-solid fa-circle-exclamation mr-1"></i> 注意事項</p>
+                            <p>ここの資料は貸出できず、この部屋の中でのみ閲覧できます。覚えておいてね。</p>
+                        </div>
+
+                        <p>そういえば、英語를 勉強したいって言ってたよね？学術情報館のホームページで <strong>E-Learning タブ</strong>を探して入ってみて。</p>
+                        <p>Hackers、Parkmungak、Sinagong など、さまざまな講座を無料で受講できるよ。</p>
+                        <p class="font-medium text-blue-800 underline decoration-blue-300">そのタブに入れば、次のスタンプをどこでもらえるか分かるはずだよ。</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-location-arrow text-blue-600 mr-2"></i> 行き先のヒント
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-center font-bold text-slate-700">え、まだ分からない？ヒントをあげるよ。これは本の請求記号だよ。</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+                            <p class="text-2xl font-mono font-black text-slate-800 tracking-wider">3階 東洋書資料室</p>
+                        </div>
+                        <p class="text-center text-sm text-slate-500 italic font-medium">その請求記号がありそうな書架を探してみて！</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+
+                    contents.forEach(content => {
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    buttons.forEach(b => {
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none';
+                    });
+
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('block');
+                        void targetContent.offsetWidth; 
+                        targetContent.classList.add('animate-fade-in');
+                    }
+                    
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEOおよびソーシャルメディア共有用メタタグ -->
+    <title>STEP 2 | 2F Reading Room 1</title>
+    <meta name="description" content="Help Bibi find the e-learning courses and the specific location on the 2nd floor!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-rose-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- ヘッダー部分：現在のステップと場所を示す -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-3">STEP 2</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2">
+                2F Reading Room 1
+            </h1>
+        </header>
+
+        <!-- 言語選択タブ (スクロールしても上部に固定) -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" id="btn-en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" id="btn-cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" id="btn-jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- コンテンツ領域 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <!-- ビビのミッションボックス (キャラクターとの対話UI: ローズテーマ) -->
+                <div class="bg-rose-50 rounded-2xl p-5 sm:p-6 border border-rose-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-rose-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-star mr-2"></i> Bibi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-rose-900">Oh my, oh my!</p>
+                        <p>I can’t believe there’s someone this kind at our school besides Hanyangi!<br>
+                        Thank you! Thanks to you, I was able to confirm my seat and use it!</p>
+                        
+                        <hr class="border-rose-200 my-3">
+                        
+                        <p>But can I ask one more thing?</p>
+                        <p>I’ve been trying to study English lately, and I heard the library has some great e-learning courses.</p>
+                        <p>Hanyangi said she would tell me if I go to...</p>
+                        
+                        <!-- ハニャンイからの言葉の引用 -->
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-rose-400 text-sm mt-4 shadow-sm italic font-medium text-slate-800">
+                            “the place where you can find new magazines, course books, and Korean poetry materials.”
+                        </div>
+                        
+                        <p class="mt-4">Come on—of course I know where that is!<br>
+                        …Actually, maybe not.</p>
+                        <p class="font-bold text-rose-800 text-lg mt-2">Can you take me there?</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・ヒントボックス -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> Hint
+                    </h3>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            It’s located on the 2nd floor!
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <!-- ビビのミッションボックス (キャラクターとの対話UI: ローズテーマ) -->
+                <div class="bg-rose-50 rounded-2xl p-5 sm:p-6 border border-rose-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-rose-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-star mr-2"></i> 比比
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-rose-900">天啊，天啊！</p>
+                        <p>除了哈娘伊，没想到我们学校还有这么亲切的人！<br>
+                        谢谢你！多亏了你，我已经完成座位确认并顺利使用了！</p>
+                        
+                        <hr class="border-rose-200 my-3">
+                        
+                        <p>不过，我还能再问一个问题吗？</p>
+                        <p>我最近想学习英语，听说学术信息馆有很不错的在线课程。</p>
+                        <p>哈娘伊说，如果去...</p>
+                        
+                        <!-- ハニャンイからの言葉の引用 -->
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-rose-400 text-sm mt-4 shadow-sm font-medium text-slate-800">
+                            “可以看到新到期刊、课程用书、韩国诗歌资料的地方”
+                        </div>
+                        
+                        <p class="mt-4">她就会告诉我。<br>
+                        哎呀，我怎么可能不知道那在哪里呢！<br>
+                        ……其实，好像也不太确定。</p>
+                        <p class="font-bold text-rose-800 text-lg mt-2">可以带我过去吗？</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・ヒントボックス -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> 提示
+                    </h3>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            位于2楼！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <!-- ビビのミッションボックス (キャラクターとの対話UI: ローズテーマ) -->
+                <div class="bg-rose-50 rounded-2xl p-5 sm:p-6 border border-rose-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-rose-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-star mr-2"></i> ビビ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-rose-900">まあ、なんてこと！</p>
+                        <p>ハニャンイ以外にも、こんなに親切な人がうちの学校にいたなんて！<br>
+                        ありがとう！おかげで座席の確定までできて、利用できるようになったよ！</p>
+                        
+                        <hr class="border-rose-200 my-3">
+                        
+                        <p>でも、もう一つ聞いてもいいかな？</p>
+                        <p>最近英語の勉強をしようと思っていて、学術情報館に良いeラーニング講座があるって聞いたんだ。</p>
+                        <p>ハニャンイが...</p>
+                        
+                        <!-- ハニャンイからの言葉の引用 -->
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-rose-400 text-sm mt-4 shadow-sm font-medium text-slate-800">
+                            「新着雑誌、講義用図書、韓国詩資料が見られる場所」
+                        </div>
+                        
+                        <p class="mt-4">に来れば教えてくれるって言ってたんだけど…<br>
+                        まさか、私がそれを知らないわけないでしょ！<br>
+                        ……でも、ちょっと自信ないかも。</p>
+                        <p class="font-bold text-rose-800 text-lg mt-2">連れて行ってくれる？</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・ヒントボックス -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> ヒント
+                    </h3>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            2階にあります！
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- フェードインアニメーション用CSS -->
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- タブ切り替え用のJavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+
+                    // 1. 全てのコンテンツを隠す
+                    contents.forEach(content => {
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    // 2. 全てのボタンのスタイルを初期化
+                    buttons.forEach(b => {
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none';
+                    });
+
+                    // 3. 選択されたコンテンツを表示し、アニメーションを適用
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('block');
+                        void targetContent.offsetWidth; // リフローを強制
+                        targetContent.classList.add('animate-fade-in');
+                    }
+                    
+                    // 4. 選択されたボタンを強調
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

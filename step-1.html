@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEOおよびソーシャルメディア共有用メタタグ -->
+    <title>STEP 1 | Library Stamp Tour</title>
+    <meta name="description" content="Mission 1: 1F Multi-space. Find the hints and apply for the library program!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<!-- min-h-screenを適用し、モバイルブラウザで画面全体をスムーズに埋めるレイアウト -->
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- ヘッダー部分 -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-3">STEP 1</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2">
+                1F Multi-space
+            </h1>
+        </header>
+
+        <!-- 言語選択タブ (スクロールしても上部に固定) -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" id="btn-en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" id="btn-cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" id="btn-jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- コンテンツ領域 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>Welcome! Perfect timing—I really needed some help!</p>
+                        <p>I heard the library offers training sessions, so I wanted to join… but I’m not sure which class I’m looking for…!</p>
+                        <p class="font-bold text-blue-800 text-lg">Can you help me?</p>
+                        
+                        <!-- アクションの強調表示 -->
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm mt-4 shadow-inner">
+                            <p class="mb-2">If you watch the video that’s playing, you’ll see hints appear from time to time.</p>
+                            <p class="font-bold text-blue-700 mb-2">Combine the hint words, find the correct answer, and apply for the class!</p>
+                            <p>After you apply, show it to the staff to get your stamp~</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学術情報館のサービス紹介ボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-indigo-50 shadow-sm mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-400"></div>
+                    <h3 class="text-lg font-bold text-indigo-900 mb-3 flex items-center">
+                        <i class="fa-solid fa-book-open text-indigo-500 mr-2"></i> Library Programs & Services
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm sm:text-base leading-relaxed">
+                        The Academic Information Center offers various programs for your study and research. From basic library use, to information search skills for assignments, and even AI tools!
+                    </p>
+                    <p class="font-bold text-indigo-800 mb-4 text-sm sm:text-base">
+                        Apply for the program you need and join the session~
+                    </p>
+                    
+                    <div class="bg-indigo-50 p-4 rounded-xl text-sm text-indigo-900 flex flex-col space-y-3">
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-right-to-bracket"></i></div>
+                            <span>Applications: <strong class="text-indigo-700">HY-LU-E</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-bullhorn"></i></div>
+                            <span>Announcements: <strong class="text-indigo-700">Library Website</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>欢迎！正好我需要帮忙，太好了！</p>
+                        <p>我听说学术信息馆有培训课程，就想来看看……但我不太清楚自己要找的是哪门课……！</p>
+                        <p class="font-bold text-blue-800 text-lg">你能帮帮我吗？</p>
+                        
+                        <!-- アクションの強調表示 -->
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm mt-4 shadow-inner">
+                            <p class="mb-2">观看正在播放的视频时，会不时出现一些提示。</p>
+                            <p class="font-bold text-blue-700 mb-2">把提示词组合起来，找到正确答案，然后去申请课程！</p>
+                            <p>申请完成后给工作人员看，就可以盖章啦～</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学術情報館のサービス紹介ボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-indigo-50 shadow-sm mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-400"></div>
+                    <h3 class="text-lg font-bold text-indigo-900 mb-3 flex items-center">
+                        <i class="fa-solid fa-book-open text-indigo-500 mr-2"></i> 图书馆培训课程
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm sm:text-base leading-relaxed">
+                        学术信息馆提供学习与研究所需的多种培训课程。从基本的图书馆使用方法，到对作业有帮助的信息检索方法，甚至AI 활용方法都有！
+                    </p>
+                    <p class="font-bold text-indigo-800 mb-4 text-sm sm:text-base">
+                        申请适合自己的课程并参加学习吧～
+                    </p>
+                    
+                    <div class="bg-indigo-50 p-4 rounded-xl text-sm text-indigo-900 flex flex-col space-y-3">
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-right-to-bracket"></i></div>
+                            <span>课程申请: <strong class="text-indigo-700">HY-LU-E</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-bullhorn"></i></div>
+                            <span>公告: <strong class="text-indigo-700">学术信息馆官网</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>ようこそ！ちょうど助けが必要だったから、助かった！</p>
+                        <p>学術情報館で講習があるって聞いて参加しようと思ったんだけど…自分が探している講習がどれなのか、よく分からなくて…！</p>
+                        <p class="font-bold text-blue-800 text-lg">ちょっと手伝ってくれる？</p>
+                        
+                        <!-- アクションの強調表示 -->
+                        <div class="bg-white p-4 rounded-xl border border-blue-100 text-sm mt-4 shadow-inner">
+                            <p class="mb-2">再生中の動画を見ていると、途中でヒントが流れるんだって。</p>
+                            <p class="font-bold text-blue-700 mb-2">ヒントの言葉を組み合わせて正解を見つけて、講習を申し込んでね！</p>
+                            <p>申し込み後にスタッフに見せると、スタンプがもらえるよ～</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 学術情報館のサービス紹介ボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-indigo-50 shadow-sm mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-400"></div>
+                    <h3 class="text-lg font-bold text-indigo-900 mb-3 flex items-center">
+                        <i class="fa-solid fa-book-open text-indigo-500 mr-2"></i> 学術情報館 講習プログラム
+                    </h3>
+                    <p class="text-slate-600 mb-4 text-sm sm:text-base leading-relaxed">
+                        学術情報館では、学業や研究に必要なさまざまな講習を提供しています。<br>基本的な利用方法から、課題に役立つ情報検索の方法、AI活用法まで！
+                    </p>
+                    <p class="font-bold text-indigo-800 mb-4 text-sm sm:text-base">
+                        必要な講習を申し込んで受講してみてくださいね～
+                    </p>
+                    
+                    <div class="bg-indigo-50 p-4 rounded-xl text-sm text-indigo-900 flex flex-col space-y-3">
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-right-to-bracket"></i></div>
+                            <span>申し込み: <strong class="text-indigo-700">HY-LU-E</strong></span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-lg mr-3 shadow-sm text-indigo-600"><i class="fa-solid fa-bullhorn"></i></div>
+                            <span>案内: <strong class="text-indigo-700">学術情報館ホームページ</strong></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- フェードインアニメーション用CSS -->
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- タブ切り替え用のJavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+
+                    // 1. 全てのコンテンツを隠す
+                    contents.forEach(content => {
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    // 2. 全てのボタンのスタイルを初期化
+                    buttons.forEach(b => {
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none';
+                    });
+
+                    // 3. 選択されたコンテンツを表示し、アニメーションを適用
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('block');
+                        void targetContent.offsetWidth; // リフローを強制
+                        targetContent.classList.add('animate-fade-in');
+                    }
+                    
+                    // 4. 選択されたボタンを強調
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEOおよびソーシャルメディア共有用メタタグ -->
+    <title>STEP 2 | Library Stamp Tour</title>
+    <meta name="description" content="Mission 1 Clear! Now help Bibi find her assigned seat in the 2F Reading Room.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- ヘッダー部分：ステップ1クリアとステップ2への進行を示す -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-base sm:text-lg font-bold shadow-sm">
+                <i class="fa-solid fa-check-circle mr-2 text-green-600"></i> STEP 1 CLEAR!
+            </span>
+        </header>
+
+        <!-- 言語選択タブ (スクロールしても上部に固定) -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" id="btn-en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" id="btn-cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" id="btn-jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- コンテンツ領域 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">Wow, you’re pretty smart!</p>
+                        <p>Thanks to you, I can finally take the class!</p>
+                        <hr class="border-blue-200 my-2">
+                        <p>Oh, but Bibi needs help too.</p>
+                        <p>She can’t find the reading room seat that was assigned to her~~</p>
+                        <p>It’s a reading room on the 2nd floor with desks lined up in a row, and there’s a hint about the seat number.</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・キオスクUIボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-desktop mr-2"></i> Reading Room Status
+                    </h3>
+                    
+                    <div class="flex justify-center space-x-4 sm:space-x-8 text-sm sm:text-base font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-4">
+                        <span class="text-slate-400">Guide</span>
+                        <span class="text-slate-400">Status</span>
+                        <span class="text-blue-600 border-b-2 border-blue-600 pb-1">Assignment</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <p class="text-slate-500 font-bold mb-2"><i class="fa-solid fa-key text-amber-500 mr-2"></i>Hint</p>
+                        <p class="text-sm text-slate-500 mb-3">(Total number of seats in that reading room)</p>
+                        <p class="text-xs sm:text-sm text-amber-600 font-medium mb-4 bg-amber-50 inline-block px-3 py-1 rounded-full border border-amber-100">
+                            <i class="fa-regular fa-image mr-1"></i> Please refer to the image on the Korean guide sign.
+                        </p>
+                        
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-800 font-mono bg-white py-4 rounded-lg shadow-inner border border-slate-100">
+                            {(9×20) + (7×6) - 4} = ?
+                        </div>
+                    </div>
+                    
+                    <p class="text-center font-bold text-slate-700 mt-6">
+                        Can you solve the hint and go to that seat?
+                    </p>
+                </div>
+
+                <!-- 図書館アプリ利用案内ボックス -->
+                <div class="bg-indigo-50 rounded-2xl p-5 border border-indigo-100 mt-6 flex items-start">
+                    <div class="bg-white p-3 rounded-full shadow-sm text-indigo-600 mr-4 flex-shrink-0">
+                        <i class="fa-solid fa-mobile-screen text-xl"></i>
+                    </div>
+                    <div class="text-sm sm:text-base text-indigo-900 leading-relaxed">
+                        <p>You might find the total number of seats in the</p>
+                        <p class="font-bold text-indigo-700 mt-1">Library App > Seat Assignment section!</p>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">哇，你真聪明！</p>
+                        <p>多亏了你，我终于可以参加课程了！</p>
+                        <hr class="border-blue-200 my-2">
+                        <p>不过，除了我以外，Bibi 也需要帮助。</p>
+                        <p>她找不到自己被分配的阅览室座位~~</p>
+                        <p>是在2楼，一个桌子排成一排的阅览室，而且有关于座位号码的提示。</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・キオスクUIボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-desktop mr-2"></i> 阅览室现况
+                    </h3>
+                    
+                    <div class="flex justify-center space-x-4 sm:space-x-8 text-sm sm:text-base font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-4">
+                        <span class="text-slate-400">指南</span>
+                        <span class="text-slate-400">现况</span>
+                        <span class="text-blue-600 border-b-2 border-blue-600 pb-1">座位分配</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <p class="text-slate-500 font-bold mb-2"><i class="fa-solid fa-key text-amber-500 mr-2"></i>提示</p>
+                        <p class="text-sm text-slate-500 mb-3">（该阅览室的总座位数）</p>
+                        <p class="text-xs sm:text-sm text-amber-600 font-medium mb-4 bg-amber-50 inline-block px-3 py-1 rounded-full border border-amber-100">
+                            <i class="fa-regular fa-image mr-1"></i> 请参考韩文指南牌上的图片提示。
+                        </p>
+                        
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-800 font-mono bg-white py-4 rounded-lg shadow-inner border border-slate-100">
+                            {(9×20) + (7×6) - 4} = ?
+                        </div>
+                    </div>
+                    
+                    <p class="text-center font-bold text-slate-700 mt-6">
+                        你能解开提示并找到那个座位吗？
+                    </p>
+                </div>
+
+                <!-- 図書館アプリ利用案内ボックス -->
+                <div class="bg-indigo-50 rounded-2xl p-5 border border-indigo-100 mt-6 flex items-start">
+                    <div class="bg-white p-3 rounded-full shadow-sm text-indigo-600 mr-4 flex-shrink-0">
+                        <i class="fa-solid fa-mobile-screen text-xl"></i>
+                    </div>
+                    <div class="text-sm sm:text-base text-indigo-900 leading-relaxed">
+                        <p>也许可以在</p>
+                        <p class="font-bold text-indigo-700 mt-1">学术信息馆 App > 座位分配 中查看总座位数！</p>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <!-- ハニャンイのミッションボックス (キャラクターとの対話UI) -->
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <!-- キャラクターバッジ -->
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">わあ、なかなか賢いね！</p>
+                        <p>おかげで講習を受けられるようになったよ！</p>
+                        <hr class="border-blue-200 my-2">
+                        <p>でも、私だけじゃなくてビビも助けが必要なんだ。</p>
+                        <p>自分に割り当てられた閲覧室の席が見つからないみたいで～～</p>
+                        <p>2階に机がずらっと並んでいる閲覧室なんだけど、座席番号に関するヒントがあるんだって。</p>
+                    </div>
+                </div>
+
+                <!-- 謎解き・キオスクUIボックス (情報伝達のための独立したUI) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-desktop mr-2"></i> 閲覧室状況
+                    </h3>
+                    
+                    <div class="flex justify-center space-x-4 sm:space-x-8 text-sm sm:text-base font-bold text-slate-800 mb-6 border-b-2 border-slate-100 pb-4">
+                        <span class="text-slate-400">案内</span>
+                        <span class="text-slate-400">状況</span>
+                        <span class="text-blue-600 border-b-2 border-blue-600 pb-1">座席配分</span>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <p class="text-slate-500 font-bold mb-2"><i class="fa-solid fa-key text-amber-500 mr-2"></i>ヒント</p>
+                        <p class="text-sm text-slate-500 mb-3">（その閲覧室の総座席数）</p>
+                        <p class="text-xs sm:text-sm text-amber-600 font-medium mb-4 bg-amber-50 inline-block px-3 py-1 rounded-full border border-amber-100">
+                            <i class="fa-regular fa-image mr-1"></i> 韓国語の案内板にある画像ヒントも参考にしてください。
+                        </p>
+                        
+                        <div class="text-2xl sm:text-3xl font-extrabold text-slate-800 font-mono bg-white py-4 rounded-lg shadow-inner border border-slate-100">
+                            {(9×20) + (7×6) - 4} = ?
+                        </div>
+                    </div>
+                    
+                    <p class="text-center font-bold text-slate-700 mt-6">
+                        ヒントを解いて、その席まで行ってみる？
+                    </p>
+                </div>
+
+                <!-- 図書館アプリ利用案内ボックス -->
+                <div class="bg-indigo-50 rounded-2xl p-5 border border-indigo-100 mt-6 flex items-start">
+                    <div class="bg-white p-3 rounded-full shadow-sm text-indigo-600 mr-4 flex-shrink-0">
+                        <i class="fa-solid fa-mobile-screen text-xl"></i>
+                    </div>
+                    <div class="text-sm sm:text-base text-indigo-900 leading-relaxed">
+                        <p>総座席数は</p>
+                        <p class="font-bold text-indigo-700 mt-1">学術情報館アプリ > 座席配分 で確認できるかもしれないよ！</p>
+                    </div>
+                </div>
+                
+                <!-- メイン画面へのナビゲーション -->
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- フェードインアニメーション用CSS -->
+    <style>
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+    <!-- タブ切り替え用のJavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+
+                    // 1. 全てのコンテンツを隠す
+                    contents.forEach(content => {
+                        content.classList.remove('block');
+                        content.classList.add('hidden');
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    // 2. 全てのボタンのスタイルを初期化
+                    buttons.forEach(b => {
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none';
+                    });
+
+                    // 3. 選択されたコンテンツを表示し、アニメーションを適用
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) {
+                        targetContent.classList.remove('hidden');
+                        targetContent.classList.add('block');
+                        void targetContent.offsetWidth; // リフローを強制
+                        targetContent.classList.add('animate-fade-in');
+                    }
+                    
+                    // 4. 選択されたボタンを強調
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO 및 소셜 미디어 공유용 메타 태그 -->
+    <title>STEP 6 | 2F Sangsang Lounge</title>
+    <meta name="description" content="The Final Mission! Complete the quiz at Sangsang Lounge to finish your stamp collection.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- 헤더 부분 (동적 텍스트 적용) -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-3" id="badge-text">
+                <i class="fa-solid fa-flag-checkered mr-1"></i> STEP 6 (FINAL)
+            </span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2" id="title-text">
+                2F Sangsang Lounge
+            </h1>
+        </header>
+
+        <!-- 언어 선택 탭 -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed text-center sm:text-left">
+                        <p class="font-bold text-xl text-blue-900 mb-2">Congratulations on making it this far! 🎉</p>
+                        <p>If you solve just one last quiz, your awesome stamp collection will finally be complete~</p>
+                    </div>
+                </div>
+
+                <!-- 최종 미션 안내 박스 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-amber-400 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-amber-400"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-ranking-star text-amber-500 mr-2 text-lg"></i> Final Mission
+                    </h3>
+                    
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-4">
+                        <ol class="list-decimal list-inside space-y-3 text-slate-700 font-medium">
+                            <li>Follow the staff’s instructions</li>
+                            <li>Check the <strong class="text-amber-700">“Generative AI Usage Guidelines”</strong> page</li>
+                            <li>Try to answer the quiz!</li>
+                        </ol>
+                    </div>
+
+                    <p class="text-center font-bold text-lg text-emerald-600 mt-2">
+                        Wishing you the best of luck 🍀
+                    </p>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed text-center sm:text-left">
+                        <p class="font-bold text-xl text-blue-900 mb-2">恭喜你坚持到这里！ 🎉</p>
+                        <p>只要答对最后一个问题，帅气的印章就会全部完成啦～</p>
+                    </div>
+                </div>
+
+                <!-- 최종 미션 안내 박스 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-amber-400 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-amber-400"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-ranking-star text-amber-500 mr-2 text-lg"></i> 最终任务
+                    </h3>
+                    
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-4">
+                        <ol class="list-decimal list-inside space-y-3 text-slate-700 font-medium">
+                            <li>请按照工作人员的指引</li>
+                            <li>查看 <strong class="text-amber-700">“生成式 AI 使用指南页面”</strong></li>
+                            <li>然后完成问答吧！</li>
+                        </ol>
+                    </div>
+
+                    <p class="text-center font-bold text-lg text-emerald-600 mt-2">
+                        祝你好运 🍀
+                    </p>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed text-center sm:text-left">
+                        <p class="font-bold text-xl text-blue-900 mb-2">ここまで来たこと、本当におめでとう！ 🎉</p>
+                        <p>最後のクイズに正解すれば、素敵なスタンプがついに完成するよ～</p>
+                    </div>
+                </div>
+
+                <!-- 최종 미션 안내 박스 -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-amber-400 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-amber-400"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-ranking-star text-amber-500 mr-2 text-lg"></i> 最後のミッション
+                    </h3>
+                    
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 mb-4">
+                        <ol class="list-decimal list-inside space-y-3 text-slate-700 font-medium">
+                            <li>スタッフの案内に従って</li>
+                            <li><strong class="text-amber-700">「生成AI活用ガイドラインページ」</strong> を見て</li>
+                            <li>クイズに挑戦してみてね！</li>
+                        </ol>
+                    </div>
+
+                    <p class="text-center font-bold text-lg text-emerald-600 mt-2">
+                        幸運を祈っているよ 🍀
+                    </p>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <style>
+        .animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            // 헤더 타이틀 동적 변경을 위한 객체
+            const headerInfo = {
+                'en': { title: '2F Sangsang Lounge' },
+                'cn': { title: '2层 Sangsang Lounge' },
+                'jp': { title: '2階 Sangsang Lounge' }
+            };
+            const titleEl = document.getElementById('title-text');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+                    
+                    contents.forEach(content => { 
+                        content.classList.remove('block'); 
+                        content.classList.add('hidden'); 
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    buttons.forEach(b => { 
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none'; 
+                    });
+                    
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) { 
+                        targetContent.classList.remove('hidden'); 
+                        targetContent.classList.add('block'); 
+                        void targetContent.offsetWidth; 
+                        targetContent.classList.add('animate-fade-in'); 
+                    }
+                    
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                    
+                    if(titleEl && headerInfo[targetLang]) {
+                        titleEl.textContent = headerInfo[targetLang].title;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

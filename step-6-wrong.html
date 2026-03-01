@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO 및 소셜 미디어 공유용 메타 태그 -->
+    <title>2F Lounge | Library Stamp Tour</title>
+    <meta name="description" content="You've found the Lounge! Let's get back on track to the correct destination.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- 헤더 부분 (정규 STEP이 아닌 안내/우회 페이지임을 표시) -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-bold mb-3 id="badge-text">Notice</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2" id="title-text">
+                2F Lounge
+            </h1>
+        </header>
+
+        <!-- 언어 선택 탭 -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">This is the Lounge…</p>
+                        <p>There are vending machines, a convenience store, and a copy room here.</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800">
+                            <p class="mb-1">And by the way,</p>
+                            <p>the Nosangil HOLMZ Studio and the Group Study Rooms can be used through the <strong>“Facility Reservation”</strong> tab.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 정답 위치 유도 박스 (에메랄드 테마로 전환 유도) -->
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-emerald-500 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-emerald-500"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-person-walking-arrow-right text-emerald-500 mr-2 text-lg"></i> Correct Destination
+                    </h3>
+                    
+                    <div class="bg-emerald-50 p-4 sm:p-5 rounded-xl border border-emerald-100 text-center">
+                        <p class="text-lg sm:text-xl font-extrabold text-emerald-800 py-1">
+                            Please move to the Sangsang Lounge across the hall!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">这里是休息室……</p>
+                        <p>这里有自动售货机、便利店和复印室。</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800">
+                            <p class="mb-1">另外，</p>
+                            <p>Nosangil HOLMZ 工作室和小组学习室可以通过 <strong>“设施预约”</strong> 页面进行使用。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-emerald-500 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-emerald-500"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-person-walking-arrow-right text-emerald-500 mr-2 text-lg"></i> 正确目的地
+                    </h3>
+                    
+                    <div class="bg-emerald-50 p-4 sm:p-5 rounded-xl border border-emerald-100 text-center">
+                        <p class="text-lg sm:text-xl font-extrabold text-emerald-800 py-1">
+                            请前往对面的 Sangsang Lounge！
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p class="font-bold text-lg text-blue-900">ここは休憩室だよ……</p>
+                        <p>自動販売機や売店、コピー室がある場所なんだ。</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800">
+                            <p class="mb-1">それから、</p>
+                            <p>Nosangil HOLMZ スタジオやグループスタディルームは <strong>「施設予約」</strong> タブから利用できるよ。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-emerald-500 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-emerald-500"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-person-walking-arrow-right text-emerald-500 mr-2 text-lg"></i> 正しい目的地
+                    </h3>
+                    
+                    <div class="bg-emerald-50 p-4 sm:p-5 rounded-xl border border-emerald-100 text-center">
+                        <p class="text-lg sm:text-xl font-extrabold text-emerald-800 py-1">
+                            向かい側にある Sangsang Lounge へ移動してね！
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <style>
+        .animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            
+            // 헤더의 뱃지와 타이틀 텍스트 동적 변경을 위한 객체
+            const headerInfo = {
+                'en': { badge: 'Notice', title: '2F Lounge' },
+                'cn': { badge: '提示', title: '2层 休息室' },
+                'jp': { badge: 'お知らせ', title: '2階 休憩室' }
+            };
+            const badgeEl = document.getElementById('badge-text');
+            const titleEl = document.getElementById('title-text');
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+                    
+                    // 콘텐츠 전환
+                    contents.forEach(content => { 
+                        content.classList.remove('block'); 
+                        content.classList.add('hidden'); 
+                        content.classList.remove('animate-fade-in'); 
+                    });
+                    
+                    // 버튼 스타일 초기화
+                    buttons.forEach(b => { 
+                        b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none'; 
+                    });
+                    
+                    // 선택된 언어 표시 및 애니메이션
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) { 
+                        targetContent.classList.remove('hidden'); 
+                        targetContent.classList.add('block'); 
+                        void targetContent.offsetWidth; 
+                        targetContent.classList.add('animate-fade-in'); 
+                    }
+                    
+                    // 활성 버튼 강조
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                    
+                    // 헤더 텍스트 변경
+                    if(badgeEl && titleEl && headerInfo[targetLang]) {
+                        badgeEl.textContent = headerInfo[targetLang].badge;
+                        titleEl.textContent = headerInfo[targetLang].title;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

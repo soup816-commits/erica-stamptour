@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO 및 소셜 미디어 공유용 메타 태그 -->
+    <title>STEP 4 | 3F Asian Collection Room</title>
+    <meta name="description" content="Mission 4: Learn how to find books and discover the media studio on the 4th floor!">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-200 min-h-screen flex flex-col">
+
+    <div class="max-w-2xl mx-auto w-full p-4 sm:p-6 lg:p-8 flex-grow">
+        
+        <!-- 헤더 부분 -->
+        <header class="text-center mb-6 pt-4 sm:pt-6">
+            <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-bold mb-3">STEP 4</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-blue-900 tracking-tight mb-2">
+                3F Asian Collection Room
+            </h1>
+        </header>
+
+        <!-- 언어 선택 탭 -->
+        <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sticky top-4 z-10">
+            <button data-lang="en" id="btn-en" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none">
+                English
+            </button>
+            <button data-lang="cn" id="btn-cn" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                中文
+            </button>
+            <button data-lang="jp" id="btn-jp" class="lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none">
+                日本語
+            </button>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <main class="relative pb-16">
+
+            <!-- ============================== -->
+            <!-- 🇺🇸 English Content -->
+            <!-- ============================== -->
+            <div id="content-en" class="tab-content block animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> Hanyangi
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>If there’s a book you want to read in the future, search for it on the library website, check whether it’s available for loan, then look at the call number and find it yourself. Got it?</p>
+                        
+                        <hr class="border-blue-200 my-4">
+                        
+                        <p class="font-bold text-lg text-blue-900">I shared some good information with you, so can you help me one more time?</p>
+                        <p>I heard there’s a place in the library where you can film and edit videos. Do you know where it is?</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800 flex items-start">
+                            <i class="fa-solid fa-camera-retro text-blue-500 mt-1 mr-3 text-lg"></i>
+                            <p>If you donate just <strong>10,000 won</strong>, you can even take ID photos or profile pictures there!</p>
+                        </div>
+                        
+                        <p class="font-bold text-blue-800 text-lg mt-4">Can you take me there?</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> Hint
+                    </h3>
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            It’s located on the 4th floor!
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> Back to Main Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇨🇳 中文 Content -->
+            <!-- ============================== -->
+            <div id="content-cn" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> 哈娘伊
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>以后如果有想看的书，可以在官网搜索资料，确认是否可以借阅，然后根据索书号自己去书架找。明白了吗？</p>
+                        
+                        <hr class="border-blue-200 my-4">
+                        
+                        <p class="font-bold text-lg text-blue-900">我告诉了你这么多有用的信息，你也再帮我一次吧。</p>
+                        <p>听说学术信息馆里有一个可以拍摄和剪辑视频的地方，你知道在哪里吗？</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800 flex items-start">
+                            <i class="fa-solid fa-camera-retro text-blue-500 mt-1 mr-3 text-lg"></i>
+                            <p>只需捐赠 <strong>10,000韩元</strong>，还可以拍证件照或个人形象照呢！</p>
+                        </div>
+                        
+                        <p class="font-bold text-blue-800 text-lg mt-4">可以带我过去吗？</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> 提示
+                    </h3>
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            位于4楼！
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> 返回主指南
+                    </a>
+                </div>
+            </div>
+
+            <!-- ============================== -->
+            <!-- 🇯🇵 日本語 Content -->
+            <!-- ============================== -->
+            <div id="content-jp" class="tab-content hidden animate-fade-in">
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 border border-blue-100 shadow-sm relative mt-6">
+                    <div class="absolute -top-4 left-5 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow flex items-center">
+                        <i class="fa-solid fa-paw mr-2"></i> ハニャンイ
+                    </div>
+                    
+                    <div class="mt-4 space-y-3 text-slate-700 leading-relaxed">
+                        <p>これから読みたい本があれば、ホームページで資料検索をして貸出可能か確認して、請求記号を見て自分で探せばいいよ。分かった？</p>
+                        
+                        <hr class="border-blue-200 my-4">
+                        
+                        <p class="font-bold text-lg text-blue-900">いい情報を教えてあげたんだから、もう一度手伝ってくれる？</p>
+                        <p>学術情報館に動画の撮影や編集ができる場所があるらしいんだけど、どこか知ってる？</p>
+                        
+                        <div class="bg-white p-4 rounded-xl border-l-4 border-blue-400 text-sm mt-4 shadow-sm font-medium text-slate-800 flex items-start">
+                            <i class="fa-solid fa-camera-retro text-blue-500 mt-1 mr-3 text-lg"></i>
+                            <p><strong>1万ウォン</strong>の寄付をすれば、証明写真やプロフィール写真も撮れるみたいなんだ！</p>
+                        </div>
+                        
+                        <p class="font-bold text-blue-800 text-lg mt-4">そこまで連れて行ってくれる？</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-5 sm:p-6 border-2 border-slate-800 shadow-md mt-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-slate-800"></div>
+                    <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mb-4 flex items-center justify-center">
+                        <i class="fa-solid fa-lightbulb text-amber-500 mr-2"></i> ヒント
+                    </h3>
+                    <div class="bg-slate-50 p-4 sm:p-6 rounded-xl border border-slate-200 text-center">
+                        <div class="text-xl sm:text-2xl font-extrabold text-blue-600 py-2">
+                            4階にあります！
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <a href="index.html" class="inline-flex items-center px-4 py-2 bg-slate-100 text-slate-600 rounded-full font-medium transition hover:bg-slate-200">
+                        <i class="fa-solid fa-house mr-2"></i> メインガイドに戻る
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <style>
+        .animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.lang-switch-btn');
+            const contents = document.querySelectorAll('.tab-content');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetLang = btn.getAttribute('data-lang');
+                    contents.forEach(content => { content.classList.remove('block'); content.classList.add('hidden'); content.classList.remove('animate-fade-in'); });
+                    buttons.forEach(b => { b.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-white text-slate-600 font-bold shadow-sm border border-slate-200 transition-all hover:bg-slate-100 focus:outline-none'; });
+                    const targetContent = document.getElementById(`content-${targetLang}`);
+                    if(targetContent) { targetContent.classList.remove('hidden'); targetContent.classList.add('block'); void targetContent.offsetWidth; targetContent.classList.add('animate-fade-in'); }
+                    btn.className = 'lang-switch-btn px-4 py-2 sm:px-5 sm:py-2.5 text-sm sm:text-base rounded-full bg-blue-600 text-white font-bold shadow-md transition-all hover:bg-blue-700 hover:shadow-lg focus:outline-none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
